@@ -7,7 +7,6 @@ import org.testng.asserts.SoftAssert;
 import tek.tdd.base.UIBaseClass;
 import tek.tdd.utility.DataGenerator;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,11 +17,11 @@ public class CreateAccountTests extends UIBaseClass {
         clickOnElement(homePage.signInLink);
         clickOnElement(signInPage.createNewAccountLink);
 
-        String expectedEmail = DataGenerator.generateRandomEmail("Zia");
+        String expectedEmail = DataGenerator.generateRandomEmail("Mohammad");
 
-        signUpPage.fillUpCreateAccountForm("Zia",
+        signUpPage.fillUpCreateAccountForm("Mohammad",
                 expectedEmail,
-                "786@Allah");
+                "Password@123");
 
         String actualEmail = getElementText(accountProfilePage.accountEmailInfo);
 
@@ -40,7 +39,7 @@ public class CreateAccountTests extends UIBaseClass {
         clickOnElement(homePage.signInLink);
         clickOnElement(signInPage.createNewAccountLink);
 
-        signUpPage.fillUpCreateAccountForm("Zia", "ziamustafa2000@hotmail.com", "786@Allah");
+        signUpPage.fillUpCreateAccountForm("Mohammad", "mohammad2536@gmail.com", "Password!321");
 
         String actualError = getElementText(signUpPage.signUpError);
 

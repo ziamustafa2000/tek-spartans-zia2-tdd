@@ -2,7 +2,7 @@
 <suite name="Running Some Test Methods">
     <test name="Running 1 Method">
         <classes>
-            <class name="tek.tdd.tests.SecurityTest">
+            <class name="tek.tdd.tdd.tests.SecurityTest">
                 <methods>
                     <!--                    <include name="validateSingIn" />-->
                     <exclude name="validateSingIn" />

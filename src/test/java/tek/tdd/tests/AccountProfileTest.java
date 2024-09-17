@@ -28,10 +28,10 @@ public class AccountProfileTest extends UIBaseClass {
         Thread.sleep(6000);
 
         //Reset to original name and phone number
-        accountProfilePage.updateNameAndPhone("Zia" , "4422028777");
+        accountProfilePage.updateNameAndPhone("Mohammad" , "2023233635");
         Thread.sleep(1000);
         String actualUserNameReset = getElementText(accountProfilePage.accountUserNameText);
-        Assert.assertEquals(actualUserNameReset, "Zia");
+        Assert.assertEquals(actualUserNameReset, "Mohammad");
     }
 
 }

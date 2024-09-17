@@ -50,4 +50,9 @@ public class UIBaseClass extends SeleniumUtility {
         quitBrowser();
     }
 
+    public void validCredentialSignIn() {
+        clickOnElement(homePage.signInLink);
+        signInPage.doSignIn("mohammad2536@gmail.com" , "Password@123");
+    }
+
 }

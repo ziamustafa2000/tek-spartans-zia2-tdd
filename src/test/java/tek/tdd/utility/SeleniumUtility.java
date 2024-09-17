@@ -2,14 +2,12 @@ package tek.tdd.utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import tek.tdd.base.BaseSetup;
 
 import java.time.Duration;
-import java.util.List;
 
 public class SeleniumUtility extends BaseSetup {
     private static final Logger LOGGER = LogManager.getLogger(SeleniumUtility.class);
@@ -18,11 +16,6 @@ public class SeleniumUtility extends BaseSetup {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(WAIT_TIME_IN_SECOND));
     }
 
-    public String getElementText(By locator) {
-        LOGGER.debug("Returning element Text {}", locator);
-        return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator))
-                .getText();
-    }
 
     public String getElementText(WebElement element) {
         LOGGER.debug("Returning element Text {}", element);
@@ -30,13 +23,7 @@ public class SeleniumUtility extends BaseSetup {
                 .getText();
     }
 
-    public boolean isElementEnabled(By locator) {
-        LOGGER.debug("Checking element enable status {}", locator);
-        boolean isEnabled = getWait().until(ExpectedConditions.visibilityOfElementLocated(locator))
-                .isEnabled();
-        LOGGER.debug("element is enabled status {}", isEnabled);
-        return isEnabled;
-    }
+
 
     public boolean isElementEnabled(WebElement element) {
         LOGGER.debug("Checking element enable status {}", element);

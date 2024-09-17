@@ -2,13 +2,13 @@
 <suite name="Running Just 1 Test">
     <test name="Regression Tests ">
         <classes>
-            <class name="tek.tdd.tests.SecurityTest" />
-            <class name="tek.tdd.tests.CreateAccountTests" />
+            <class name="tek.tdd.tdd.tests.SecurityTest" />
+            <class name="tek.tdd.tdd.tests.CreateAccountTests" />
         </classes>
     </test>
     <test name="Smoke Tests">
         <classes>
-            <class name="tek.tdd.tests.BasicSetupTest" />
+            <class name="tek.tdd.tdd.tests.BasicSetupTest" />
         </classes>
     </test>
 </suite>

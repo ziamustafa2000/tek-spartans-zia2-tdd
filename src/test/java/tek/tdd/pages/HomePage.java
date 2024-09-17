@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import tek.tdd.utility.SeleniumUtility;
 
+import static java.sql.DriverManager.getDriver;
+
 public class HomePage extends SeleniumUtility {
 
     //At the constructor we have to initialize these elements with Instance of WebDriver
@@ -20,4 +22,7 @@ public class HomePage extends SeleniumUtility {
 
     @FindBy(id = "accountLink")
     public WebElement accountLink;
+
+    @FindBy(className = "Toastify__toast-body")
+    public WebElement toastBody;
 }
